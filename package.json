@@ -6,7 +6,8 @@
   "scripts": {
     "test": "express, tea",
     "start": "node index.js",
-    "dev": "nodemon index.js" },
+    "dev": "nodemon index.js"
+  },
   "repository": {
     "type": "git",
     "url": "nitish gupta"
@@ -19,6 +20,7 @@
   "type": "module",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^5.1.0"
   },
   "devDependencies": {
