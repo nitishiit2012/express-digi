@@ -1,0 +1,27 @@
+{
+  "name": "nitish",
+  "version": "1.0.0",
+  "description": "a simple manager for all requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "express, tea",
+    "start": "node index.js",
+    "dev": "nodemon index.js" },
+  "repository": {
+    "type": "git",
+    "url": "nitish gupta"
+  },
+  "keywords": [
+    "express",
+    "tea"
+  ],
+  "author": "nitish gupta",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
