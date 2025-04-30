@@ -1,9 +1,31 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import morgan from 'morgan';
+import winston from 'winston';
 dotenv.config();
 
 const app=express();
 
+
+// Configure Winston logger
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.json()
+    ),
+    transports: [
+        new winston.transports.Console(),
+        new winston.transports.File({ filename: 'logs/app.log' })
+    ]
+});
+
+// Use Morgan middleware with Winston
+app.use(morgan('combined', {
+    stream: {
+        write: (message) => logger.info(message.trim())
+    }
+}));
 
 const port = process.env.PORT|| 3000;
 
